@@ -1,0 +1,12 @@
+version: "2"
+services:
+
+  php:
+   build: ./
+   ports:
+     - "9000:9000"
+     - "9001:9001"
+   volumes:
+     - .:/var/www/html
+     - ~/.ssh:/root/.ssh
+     - ./custom.ini:/usr/local/etc/php/conf.d/custom.ini

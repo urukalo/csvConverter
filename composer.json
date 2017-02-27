@@ -1,0 +1,28 @@
+{
+  "name": "urukalo/csvconverter",
+  "description": "csv converter",
+  "keywords": ["cvs","convert", "sql", "xml"],
+  "homepage": "https://github.com/urukalo/csvconverter",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Milan Urukalo",
+      "email": "urukalo@gmail.com"
+    }
+  ],
+  "require": {
+    "league/csv": "8.0.0",
+    "twig/twig": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "csvConverter\\": "src/"
+    }
+  },
+  "scripts": {
+    "csvConvert": [
+      "@composer install",
+      "csvConverter\\csvConverter::run"
+      ]
+  }
+}
